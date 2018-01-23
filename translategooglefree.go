@@ -7,7 +7,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"strings"
-
+	"net/url"
 	"github.com/robertkrimen/otto"
 )
 
@@ -40,7 +40,7 @@ func Translate(source, sourceLang, targetLang string) (string, error) {
 	var result []interface{}
 
 	url := "https://translate.google.cn/translate_a/single?client=gtx&sl=" +
-		sourceLang + "&tl=" + targetLang + "&dt=t&q=" + source
+	sourceLang + "&tl=" + targetLang + "&dt=t&q=" + url.QueryEscape(source)
 
 	r, err := http.Get(url)
 	if err != nil {
