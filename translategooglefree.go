@@ -17,7 +17,7 @@ func Translate(source, sourceLang, targetLang string) (string, error) {
 	myurl := "https://translate.google.cn/translate_a/single?client=gtx&sl=" +
 	url.QueryEscape(sourceLang) + "&tl=" + url.QueryEscape(targetLang) + "&dt=t&q=" + url.QueryEscape(source)
 	
-	fmt.Printf("%v", myurl)
+	fmt.Println("%v", myurl)
 	r, err := http.Get(myurl)
 	if err != nil {
 		return "err", errors.New("Error getting translate.google.cn")
@@ -28,12 +28,12 @@ func Translate(source, sourceLang, targetLang string) (string, error) {
 	if err != nil {
 		return "err", errors.New("Error reading response body")
 	}
-
+	fmt.Println(body)
 	bReq := strings.Contains(string(body), `<title>Error 400 (Bad Request)`)
 	if bReq {
 		return "err", errors.New("Error 400 (Bad Request)")
 	}
-
+	
 	err = json.Unmarshal(body, &result)
 	if err != nil {
 		return "err", errors.New("Error unmarshaling data")
