@@ -8,7 +8,6 @@ import (
 	"net/http"
 	"strings"
 	"net/url"
-	"github.com/robertkrimen/otto"
 )
 
 func Translate(source, sourceLang, targetLang string) (string, error) {
