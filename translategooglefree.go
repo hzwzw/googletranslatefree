@@ -48,7 +48,7 @@ func Translate(source, sourceLang, targetLang string) (string, error) {
 
 	r, err := http.Get(url)
 	if err != nil {
-		return "err", errors.New("Error getting translate.googleapis.com")
+		return "err", errors.New("Error getting translate.google.cn")
 	}
 	defer r.Body.Close()
 
