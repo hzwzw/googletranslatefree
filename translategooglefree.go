@@ -14,7 +14,7 @@ func Translate(source, sourceLang, targetLang string) (string, error) {
 	var text []string
 	var result []interface{}
 
-	myurl := "https://translate.google.cn/translate_a/single?client=gtx&sl=" +
+	myurl := "https://translate.google.cn/translate_a/single?client=gtx&ie=UTF-8&oe=UTF-8&sl=" +
 	url.QueryEscape(sourceLang) + "&tl=" + url.QueryEscape(targetLang) + "&dt=t&q=" + url.QueryEscape(source)
 	
 	fmt.Println("%v", myurl)
