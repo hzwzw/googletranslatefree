@@ -38,7 +38,7 @@ func Translate(source, sourceLang, targetLang string) (string, error) {
 	if err != nil {
 		return "err", errors.New("Error unmarshaling data")
 	}
-
+	fmt.Println(result)
 	if len(result) > 0 {
 		inner := result[0]
 		for _, slice := range inner.([]interface{}) {
