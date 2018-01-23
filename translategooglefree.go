@@ -17,7 +17,7 @@ func Translate(source, sourceLang, targetLang string) (string, error) {
 	myurl := "https://translate.google.cn/translate_a/single?client=gtx&sl=" +
 	sourceLang + "&tl=" + targetLang + "&dt=t&q=" + url.QueryEscape(source)
 	
-	fmt.Sprintf("%v", myurl)
+	fmt.printf("%v", myurl)
 	r, err := http.Get(myurl)
 	if err != nil {
 		return "err", errors.New("Error getting translate.google.cn")
