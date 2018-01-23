@@ -39,10 +39,10 @@ func Translate(source, sourceLang, targetLang string) (string, error) {
 	var text []string
 	var result []interface{}
 
-	url := "https://translate.google.cn/translate_a/single?client=gtx&sl=" +
+	myurl := "https://translate.google.cn/translate_a/single?client=gtx&sl=" +
 	sourceLang + "&tl=" + targetLang + "&dt=t&q=" + url.QueryEscape(source)
 
-	r, err := http.Get(url)
+	r, err := http.Get(myurl)
 	if err != nil {
 		return "err", errors.New("Error getting translate.google.cn")
 	}
