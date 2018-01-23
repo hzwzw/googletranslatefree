@@ -4,7 +4,7 @@ Note: This is not normal commercial Translator API
 provided by Google.
 
 Install:<br>
-go get github.com/bas24/googletranslatefree
+go get github.com/hzwzw/googletranslatefree
 
 Example usage:
 
