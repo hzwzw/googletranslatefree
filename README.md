@@ -13,7 +13,7 @@ Example usage:
 
 	import (
 		"fmt"
-		gt "github.com/bas24/translategooglefree"
+		gt "github.com/hzwzw/translategooglefree"
 	)
 
 	func main(){
