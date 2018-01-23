@@ -43,7 +43,7 @@ func Translate(source, sourceLang, targetLang string) (string, error) {
 	if err != nil {
 		return "err", err
 	}
-	url := "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" +
+	url := "https://translate.googleapis.cn/translate_a/single?client=gtx&sl=" +
 		sourceLang + "&tl=" + targetLang + "&dt=t&q=" + encodedSource
 
 	r, err := http.Get(url)
