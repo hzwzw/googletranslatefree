@@ -43,8 +43,6 @@ func Translate(source, sourceLang, targetLang string) (string, error) {
 		for _, slice := range inner.([]interface{}) {
 			for _, translatedText := range slice.([]interface{}) {
 				text = append(text, fmt.Sprintf("%v", translatedText))
-				fmt.Println(text)
-				fmt.Println(translatedText)
 				break
 			}
 		}
